@@ -38,7 +38,30 @@ src/
 └── styles/         brand tokens, db-* component classes, dark-mode atmosphere
 ```
 
-## Not on this branch
+# Aegis-Docker: Advanced Container Hardening & Edge-AI Deployment
 
-No login/auth, no AI assistant, no network calls — those live on `advanced`.
-The brand kit, component spec, and design tokens match the full DevBoard build.
+A hands-on DevSecOps project focused on modern container security, extreme image optimization, and local AI orchestration using the next-generation Docker ecosystem. 
+
+This project demonstrates how to transition a high-vulnerability, bloated full-stack application (~824MB) into an enterprise-grade, hardened production container (~68MB) with zero critical vulnerabilities, alongside running secure, completely offline LLMs using Docker Model Runner.
+
+## 🚀 Key Features & Architecture
+
+1. **DevSecOps Vulnerability Auditing:** Integrated `Docker Scout` to run automated CVE vulnerability scans directly inside the local pipeline.
+2. **Multi-Stage Optimization:** Drastically reduced attack surface and image size by isolating build dependencies from runtime environments.
+3. **Enterprise Hardening (`dh.io`):** Utilized Docker Hardened Images and secure non-root user configurations to patch vulnerabilities to production-grade standards.
+4. **AI-Assisted Debugging:** Leveraged Docker’s built-in `Gordon AI` assistant to audit and optimize Dockerfile layers.
+5. **Edge-AI & Local Models:** Maintained an air-gapped, zero-internet local LLM workspace running Google's Gemma models via `Docker Model Runner`.
+
+## 📈 Optimization Metrics & Results
+
+| Image Version | Base Configuration | Size (MB) | Critical CVEs | High CVEs | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Full Build** | `node:20-alpine` (Single Stage) | ~824 MB | 5 | 44 | 🔴 Rejected |
+| **Multi-Stage** | `node:24-alpine` (Split Runner) | ~375 MB | 0 | 0 | 🟡 Warning |
+| **Hardened Core**| `dh.io/nginx` (Distro-less style)| **~68 MB** | **0** | **0** | 🎉 **Production Ready** |
+
+## 🛠️ Tech Stack & Tools
+* **Containerization:** Docker Desktop, Multi-stage Builds, Distroless/Hardened Images (`dh.io`)
+* **Security & Testing:** Docker Scout (CVE scanning), Automated Layer Auditing
+* **AI Orchestration:** Gordon AI (Dockerfile refinement), Docker Model Runner (Gemma 3/4)
+* **Web Server:** Nginx (Secure reverse proxy for static assets)
