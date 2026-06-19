@@ -1,5 +1,8 @@
 # DevBoard — Fundamentals (UI only)
 
+<img width="1366" height="732" alt="dashboard" src="https://github.com/user-attachments/assets/5d1f90e5-8c1e-4947-b343-ad43f5645b1e" />
+
+ 
 The DevBoard front end, running **standalone** with no backend. This is the
 `fundamentals` branch: it teaches the React UI in isolation — layout shell,
 routing, TanStack Query, the kanban board, the command bar, dark mode — before
@@ -43,6 +46,11 @@ src/
 A hands-on DevSecOps project focused on modern container security, extreme image optimization, and local AI orchestration using the next-generation Docker ecosystem. 
 
 This project demonstrates how to transition a high-vulnerability, bloated full-stack application (~824MB) into an enterprise-grade, hardened production container (~68MB) with zero critical vulnerabilities, alongside running secure, completely offline LLMs using Docker Model Runner.
+
+<img width="885" height="548" alt="scout_full_image" src="https://github.com/user-attachments/assets/15aa114f-9c88-4085-b0bc-c1da58a44925" />
+
+<img width="904" height="659" alt="multistage_image" src="https://github.com/user-attachments/assets/93d8d0b3-b167-49ca-8df7-7512d05ebf54" />
+
 
 ## 🚀 Key Features & Architecture
 
